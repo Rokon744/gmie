@@ -4,31 +4,36 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import gsCal from "../assets/medicine/gs-cal.png"
+import mShas from "../assets/medicine/m-shas.png"
+import chirota from "../assets/medicine/chirota.png"
+import urix from "../assets/medicine/urix.png"
+import sukrosonjiboni from "../assets/medicine/sukrosonjiboni.png"
 
 const Products = () => {
   const data = [
     {
-      img: "/src/assets/medicine/gs-cal.png",
+      img: gsCal,
       name: "জিএস – ক্যাল",
       title: "ন্যাচারাল ক্যালসিয়াম",
     },
     {
-      img: "/src/assets/medicine/m-shas.png",
+      img: mShas,
       name: "এম – শ্বাস চিন্তামণি",
       title: "এ্যাজমা ও শ্বাসকষ্ট প্রশমক",
     },
     {
-      img: "/src/assets/medicine/chirota.png",
+      img: chirota,
       name: "চিরতা",
       title: "শারীরিক দুর্বলতা প্রশমক",
     },
     {
-      img: "/src/assets/medicine/urix.png",
+      img: urix,
       name: "ইউরিক্স",
       title: "যৌন দুর্বলতা প্রশমক",
     },
     {
-      img: "/src/assets/medicine/sukrosonjiboni.png",
+      img: sukrosonjiboni,
       name: "শুক্রসঞ্জীবনী",
       title: "শুক্রপাত ও বলক্ষয় প্রশমক",
     },
