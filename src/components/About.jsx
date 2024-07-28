@@ -34,7 +34,7 @@ const About = () => {
         </p>
       </div>
       <div className=" w-full lg:w-3/4">
-        <img className=" rounded-lg object-cover w-full h-[600px]" src={img} alt="img" />
+        <img className=" rounded-lg object-cover w-full md:h-[900px]" src={img} alt="img" />
       </div>
     </div>
   );

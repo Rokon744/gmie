@@ -1,8 +1,10 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "../layouts/Button";
 import emailjs from "@emailjs/browser";
 
 const Contact = ({ closeForm }) => {
+  const [success, setSuccess] = useState(false)
+  const [rightNum, setRightNum] = useState(false)
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -14,9 +16,17 @@ const Contact = ({ closeForm }) => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          setSuccess(true)
+          setRightNum(true)
+          form.current.reset();
+          // Set timeout to reset success state after 3 seconds
+          setTimeout(() => {
+            setSuccess(false);
+          }, 6000);
         },
         (error) => {
+          setSuccess(false)
+          setRightNum(false)
           console.log("FAILED...", error.text);
         }
       );
@@ -71,12 +81,8 @@ const Contact = ({ closeForm }) => {
               required
             ></textarea>
           </div>
-          <p>
-            সরাসরি আমাদের সাথে কথা বলতে কল করুন <br />
-            <span className="text-[20px] text-[#6cbf0d] font-semibold">👉 01677717777</span>
-            <br />
-            <span className="text-[20px] text-[#6cbf0d] font-semibold">👉 01713825262</span>
-          </p>
+          {success && <p className="text-xl font-bold text-[green]">Message Sent Successfull</p>}
+          {rightNum && <p>আমরা আপনার বার্তা প্রশংসা করি | যদি আপনার মোবাইল {} নম্বর নির্ভুল হয় তবে আমরা দ্রুত আপনার সাথে যোগাযোগ করব | ধন্যবাদ</p>}
           <div className=" flex gap-5">
             <Button title="Send Mail" />
             <button
@@ -86,6 +92,12 @@ const Contact = ({ closeForm }) => {
               Close
             </button>
           </div>
+          <p>
+            সরাসরি আমাদের সাথে কথা বলতে কল করুন <br />
+            <span className="text-[20px] text-[#6cbf0d] font-semibold">👉 01677717777</span>
+            <br />
+            <span className="text-[20px] text-[#6cbf0d] font-semibold">👉 01713825262</span>
+          </p>
         </form>
       </div>
     </div>
