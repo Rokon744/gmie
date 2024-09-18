@@ -1,5 +1,7 @@
+import Link from "next/link";
 import React from "react";
-import { Link } from "react-scroll";
+import logo from "./logo.png"
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -7,7 +9,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between p-8 md:px-32 px-5">
         <div className=" w-full md:w-1/4">
           <h1 className=" font-semibold text-xl pb-4">
-            <img className="rounded-md" src="/logo.png" alt="" />
+            <Image className="rounded-md" src={logo} alt="" />
           </h1>
           <p className=" text-sm pb-4">
             আমাদের ডেডিকেটেড ডাক্তারদের দল, প্রত্যেকেই আয়ুর্বেদ চিকিৎসা,
@@ -30,28 +32,19 @@ const Footer = () => {
           </h1>
           <nav className=" flex flex-col gap-2">
             <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              duration={500}
+              href="#about"
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
               আমি
             </Link>
             <Link
-              to="services"
-              spy={true}
-              smooth={true}
-              duration={500}
+              href="services"
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
               সেবাসমূহ
             </Link>
             <Link
-              to="doctors"
-              spy={true}
-              smooth={true}
-              duration={500}
+              href="doctors"
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
               পণ্যসমূহ
@@ -64,28 +57,19 @@ const Footer = () => {
           </h1>
           <nav className=" flex flex-col gap-2">
             <Link
-              to="services"
-              spy={true}
-              smooth={true}
-              duration={500}
+              href="services"
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
               ল্যাব পরীক্ষা
             </Link>
             <Link
-              to="services"
-              spy={true}
-              smooth={true}
-              duration={500}
+              href="services"
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
               স্বাস্থ্য পরীক্ষা
             </Link>
             <Link
-              to="services"
-              spy={true}
-              smooth={true}
-              duration={500}
+              href="services"
               className=" hover:text-hoverColor transition-all cursor-pointer"
             >
               অন্যান্য রোগী
@@ -95,13 +79,13 @@ const Footer = () => {
         <div className=" w-full md:w-1/4">
           <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">Contact Us</h1>
           <nav className=" flex flex-col gap-2">
-            <Link to="/" spy={true} smooth={true} duration={500}>
+            <Link href="/">
               অন্নদানগর, পীরগাছা, রংপুর
             </Link>
-            <Link to="/" spy={true} smooth={true} duration={500}>
+            <Link href="/">
               mr.josimuddin@gmail.com
             </Link>
-            <Link to="/" spy={true} smooth={true} duration={500}>
+            <Link href="/">
               01677717777 / 01713825262
             </Link>
           </nav>

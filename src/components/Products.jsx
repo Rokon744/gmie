@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -9,6 +10,7 @@ import mShas from "../assets/medicine/m-shas.png"
 import chirota from "../assets/medicine/chirota.png"
 import urix from "../assets/medicine/urix.png"
 import sukrosonjiboni from "../assets/medicine/sukrosonjiboni.png"
+import Image from "next/image";
 
 const Products = () => {
   const data = [
@@ -112,7 +114,7 @@ const Products = () => {
               key={index}
             >
               <div>
-                <img
+                <Image
                   src={e.img}
                   alt="img"
                   className=" md:h-[350px] rounded-t-xl w-full"

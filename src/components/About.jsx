@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../assets/emon.jpg";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -34,7 +35,7 @@ const About = () => {
         </p>
       </div>
       <div className=" w-full lg:w-3/4">
-        <img className=" rounded-lg object-cover w-full md:h-[900px]" src={img} alt="img" />
+        <Image className=" rounded-lg object-cover w-full md:h-[900px]" src={img} alt="img" />
       </div>
     </div>
   );
